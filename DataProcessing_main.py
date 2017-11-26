@@ -66,6 +66,14 @@ train_oil_trans_item_df['class'] = train_oil_trans_item_df['class'].astype('cate
 
 train_oil_trans_item_df.perishable = train_oil_trans_item_df.perishable.astype('category')
 
+train_oil_trans_item_df.family = train_oil_trans_item_df.family.astype('category')
+
 
 ### 
 
+
+data_df = train_oil_trans_item_df
+
+### selecting data set for only Grocery family 
+
+data_df = data_df.loc[data_df.family=='GROCERY I',:]
